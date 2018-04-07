@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:b="http://bootsfaces.net/ui">
+
+    <b:navBar brand="PokeTime" class="" inverse="true" fixed="top">
+        <b:navbarLinks>
+            <b:navLink value="Login" href="#{facesContext.externalContext.request.contextPath}/Login.xhtml"></b:navLink>
+            <b:dropMenu value="Meu Perfil">
+                <b:navLink value="Configuração" href="#"></b:navLink>
+            </b:dropMenu>
+             <b:dropMenu value="Treinadores">
+                 <b:navLink value="Cadastro Treinador" href="#{facesContext.externalContext.request.contextPath}/treinadores/CadastroTreinadores.xhtml"></b:navLink>
+                <b:navLink></b:navLink>
+            </b:dropMenu>
+            <b:dropMenu value="Times">
+                 <b:navLink value="Cadastrar Timer" href="#{facesContext.externalContext.request.contextPath}/times/CadastroTimes.xhtml"></b:navLink>
+            </b:dropMenu>
+             <b:dropMenu value="Pokemons">
+                 <b:navLink value="Adicionar Habilidades" href="#{facesContext.externalContext.request.contextPath}/pokemons/PesquisaPokemons.xhtml"></b:navLink>
+            </b:dropMenu>
+            
+        </b:navbarLinks>
+     
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Olá #{seguranca.nomeUsuario}! </a></li>
+            <li><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Configurações</a></li>
+            <li><a href="#{facesContext.externalContext.request.contextPath}/j_spring_security_logout"><span class="glyphicon glyphicon-log-in"></span> Sair</a></li>
+        </ul>
+
+    </b:navBar>
+
+</ui:composition>

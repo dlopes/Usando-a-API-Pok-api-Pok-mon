@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Pokemon Timer</title>
+        <meta name="author" content="Dilson Lopes"></meta>
+       
+        <f:facet name="first">
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </f:facet>
+    </h:head>
+    <h:body style="padding-top: 50px; padding-bottom: 20px;">
+        <ui:insert name="navBar">
+            <ui:include src="navBar.xhtml" />
+        </ui:insert>
+
+        <p:ajaxStatus styleClass="ajax-status">
+
+            <f:facet name="start">
+                <div class="div-ajax-carregamento-pagina">
+                     <h:graphicImage library="images" name="loading.gif"/> Carregando...
+                </div>
+               
+
+            </f:facet>
+
+            <f:facet name="complete">
+
+                <h:outputText value=""/>
+
+            </f:facet>
+
+        </p:ajaxStatus>
+        <b:jumbotron>
+            <b:container>
+                <ui:insert name="container">
+
+                </ui:insert>
+
+            </b:container>
+        </b:jumbotron>
+        <b:container>
+            <ui:insert name="container2">
+                <ui:include src="conteudo2.xhtml" />
+            </ui:insert>
+
+            <hr/>
+
+            <footer>
+                <p>© PokeTime</p>
+            </footer>
+        </b:container>
+    </h:body>
+</html>

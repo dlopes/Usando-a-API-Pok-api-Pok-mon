@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <f:facet name="first">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</f:facet>
+
+	<title>PokeTime</title>
+        <h:outputScript library="primefaces" name="jquery/jquery.js" />
+        <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="app" name="styles/custom.css" />
+	<h:outputStylesheet library="app" name="styles/layout.css" />
+	<h:outputStylesheet library="app" name="styles/components.css" />
+	<h:outputScript library="bootstrap/js" name="bootstrap.min.js" />
+	<h:outputScript target="body" library="app" name="javascripts/app.js" />
+        
+        
+
+    </h:head>
+    <h:body>
+        
+        <header class="aw-topbar">
+		<!--<h:graphicImage library="app" name="images/logo.png" />-->
+		
+		<a href="#" class="aw-toggle  js-toggle"><i class="fa  fa-bars"></i></a>
+	</header>
+	
+	<aside class="aw-sidebar  js-sidebar">
+		<ui:include src="menu.xhtml" />
+	</aside>
+	
+	<section class="aw-content  js-content">
+		<ui:insert name="content" />
+	</section>
+     
+    </h:body>
+</html>
